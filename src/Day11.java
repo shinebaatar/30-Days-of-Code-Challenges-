@@ -10,7 +10,7 @@ public class Day11 {
             }
         }
         
-        int maxValue = 0;
+        int maxValue = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length - 2; i++) {
 			for (int j = 0; j < arr.length - 2; j++) {
 				int value = arr[i][j] +
@@ -20,7 +20,7 @@ public class Day11 {
 							arr[i + 2][j] + 
 							arr[i + 2][j + 1] + 
 							arr[i + 2][j + 2];
-				maxValue = Math.max(maxValue, value);
+				maxValue = value;
 			}
 		}
         System.out.println(maxValue);
